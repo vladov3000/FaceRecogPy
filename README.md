@@ -1,3 +1,7 @@
+# FaceRecogPy
+
+Set of scripts to use in backend of Face Recognition App.
+
 Setup:
 
     python3 -m venv ./venv
