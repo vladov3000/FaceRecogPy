@@ -33,9 +33,10 @@ def main(input_image_filepath: str, debug: bool = True) -> str:
         diff = face_recognition.face_distance(
             [input_image_encoding], saved_image_encoding
         )[0]
+
         if min_diff == None or diff < min_diff:
             min_diff = diff
-            best_id = filename.rstrip(".jpg")
+            best_id = os.path.splitext(filename)[0]
 
         if debug:
             print(f"{filename}: {diff}")
