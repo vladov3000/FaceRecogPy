@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 """
 Python Script that takes image path as input and prints the bounding box 
 coordinates in JSON.
@@ -5,7 +6,6 @@ coordinates in JSON.
 
 import json
 import sys
-from typing import Dict, List, Tuple
 
 import face_recognition
 

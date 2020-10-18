@@ -23,11 +23,11 @@ def main(image_path: str, id: str) -> str:
     image = face_recognition.load_image_file(image_path)
     encoding = face_recognition.face_encodings(image)
     if encoding == []:
-        return "Cannot encode"
+        return '{"worked": false}'
 
     with open(save_path, "wb") as f:
         pickle.dump(encoding[0], f)
-    return ""
+    return '{"worked": true}'
 
 
 if __name__ == "__main__":

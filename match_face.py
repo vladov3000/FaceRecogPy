@@ -1,3 +1,4 @@
+#!/usr/local/bin/python
 """
 Python script that takes input image, encodes it, and compares encoding 
 to saved encodings. Prints id of the most similiar encoding or "" if 
@@ -16,7 +17,7 @@ from context import SAVED_ENCODINGS_DIR
 MATCH_TOLERANCE = 0.6
 
 
-def main(input_image_filepath: str, debug: bool = True) -> str:
+def main(input_image_filepath: str, debug: bool = False) -> str:
     if not os.path.isdir(SAVED_ENCODINGS_DIR):
         return ""
 
