@@ -22,7 +22,10 @@ def main(input_image_filepath: str, debug: bool = False) -> str:
         return ""
 
     input_image = face_recognition.load_image_file(input_image_filepath)
-    input_image_encoding = face_recognition.face_encodings(input_image)[0]
+    input_image_encoding = face_recognition.face_encodings(input_image)
+    if len(input_image_encoding) == 0:
+        return ""
+    input_image_encoding = input_image_encoding[0]
 
     min_diff = None
     best_id = None
